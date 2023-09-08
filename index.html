@@ -5,34 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal and Real-Time Data Attributes</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
     <section class="container">
         
-        <div class="slack-name" data-testid="slackUserName">
+        <h2 class="slack-name" data-testid="slackUserName">
           AKIOSI ABDULAFEEZ GBENGA
-        </div>
+        </h2>
       
         <img class="slack-display-image" src="/images/Akiosi_660x758.png" 
          alt="Akiosi Abdulafeez" data-testid="slackDisplayImage">
       
-        <div class="current-day-of-the-week" data-testid="currentDayOfTheWeek">
-          Current day of the week
-        </div>
-      
-        <div class="current-utc-time" data-testid="currentUTCTime">
-          Current UTC time
-        </div>
+         <p class="current-day-of-the-week" data-testid="currentDayOfTheWeek">
+          Current day of the week : Friday
+        </p>
 
-        <div class="myTrack" data-testid="myTrack">
+        <p class="myTrack" data-testid="myTrack">
             TRACK : FRONTEND
+        </p>
+
+        <p>
+          <a data-testid="githubURL" href="https://github.com/Itz-Snow">MyGithub Profile</a>
+        </p>
+        
         </div>
 
-        <a data-testid="githubURL" href="https://github.com/Itz-Snow">MyGithub Profile</a>
-
-        </div>
+        <script>
+          const currentTimeMillis = Date.now(); 
+          document.write("Current UTC time in milliseconds: " + currentTimeMillis);
+      </script>  
     </section>
     
 </body>

@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-div{
+p{
     padding: 0.5rem;
 }
 body {
@@ -16,7 +16,7 @@ body {
   }
   
   .container {
-    height: 320px;
+    height: auto;
     background-color:rgba(39, 39, 41, 0.596);
     padding: 20px;
     border-radius: 8px;

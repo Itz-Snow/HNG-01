@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+div{
+    padding: 0.5rem;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color:rgb(0, 0, 2); 
+  }
+  
+  .container {
+    height: 320px;
+    background-color:rgba(39, 39, 41, 0.596);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(252, 250, 250, 0.315); 
+    text-align: center;
+    color: aliceblue;
+  }
+  
+  .slack-name {
+    font-size: 2em;
+    font-weight: bold;
+
+  }
+  
+  .slack-display-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5em;
+  }
+  
+  .current-day-of-the-week {
+    font-size: 1.5em;
+  }
+  
+  .current-utc-time {
+    font-size: 1em;
+  }
+  a {
+    color: rgb(137, 43, 226);
+  }
+  

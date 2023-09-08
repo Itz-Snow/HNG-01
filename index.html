@@ -8,34 +8,50 @@
 </head>
 <body>
 
+  <main>
+
     <section class="container">
         
-        <h2 class="slack-name" data-testid="slackUserName">
-          AKIOSI ABDULAFEEZ GBENGA
-        </h2>
+      <p class="slack-name" data-testid="slackUserName">
+        Slack Name : AKIOSI ABDULAFEEZ GBENGA
+      </p>
+    
+      <img class="slack-display-image" src="./images/Akiosi_660x758.png" 
+       alt="Akiosi Abdulafeez" data-testid="slackDisplayImage">
+    
+       <p class="current-day-of-the-week" data-testid="currentDayOfTheWeek">
+        Current day of the week : Saturday
+      </p>
+
+       <p class="current-UTC" data-testid="currentUTCTime">
+        Current UTC Time : <span id="utcTimePlaceholder"></span>
+      </p>
+
+      <p class="myTrack" data-testid="myTrack">
+          TRACK : FRONTEND
+      </p>
+
+      <footer>
+        <p data-testid="githubURL">
+          <a  href="https://github.com/Itz-Snow">MyGithub Profile</a>
+        </p>
+      </footer>
       
-        <img class="slack-display-image" src="./images/Akiosi_660x758.png" 
-         alt="Akiosi Abdulafeez" data-testid="slackDisplayImage">
+      </div>
+
+      <script>
+        const currentTimeMillis = Date.now();
+        const utcTimeElement = document.getElementById('utcTimePlaceholder');
+        if (utcTimeElement) {
+          utcTimeElement.textContent = currentTimeMillis;
+        }
+      </script>
       
-         <p class="current-day-of-the-week" data-testid="currentDayOfTheWeek">
-          Current day of the week : Friday
-        </p>
+  </section>
 
-        <p class="myTrack" data-testid="myTrack">
-            TRACK : FRONTEND
-        </p>
+  </main>
 
-        <p>
-          <a data-testid="githubURL" href="https://github.com/Itz-Snow">MyGithub Profile</a>
-        </p>
-        
-        </div>
-
-        <script>
-          const currentTimeMillis = Date.now(); 
-          document.write("Current UTC Time : " + currentTimeMillis);
-      </script>  
-    </section>
+    
     
 </body>
 </html>

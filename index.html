@@ -40,11 +40,21 @@
       </div>
 
       <script>
-        const currentTimeMillis = Date.now();
-        const utcTimeElement = document.getElementById('utcTimePlaceholder');
-        if (utcTimeElement) {
-          utcTimeElement.textContent = currentTimeMillis;
+        
+        function updateUTCTime() {
+          const currentTime = Date.now();
+          const utcTimeElement = document.getElementById('utcTimePlaceholder');
+
+          if (utcTimeElement) {
+            utcTimeElement.textContent = currentTime.toString();
+          }
         }
+
+        // Update the time initially
+        updateUTCTime();
+
+        // Update the time every 1 millisecond
+        setInterval(updateUTCTime, 1);
       </script>
 
   </section>

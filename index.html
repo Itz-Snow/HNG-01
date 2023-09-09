@@ -1,75 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal and Real-Time Data Attributes</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNG Stage 1</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
   <main>
-
     <section class="container">
-        
-      <p class="slack-name" data-testid="slackUserName">
-        Slack Name : Akiosi Abdulafeez 
-      </p>
-    
-      <img class="slack-display-image" data-testid="slackDisplayImage" src="./images/Akiosi_660x758.png" 
-      alt="Akiosi Abdulafeez" width="660" height="758" >
-    
-       <p class="current-day-of-the-week" data-testid="currentDayOfTheWeek">
-        Current day of the week : <span id="dayoftheweek"> </span>
+
+      <h2 data-testid="slackUserName">Akiosi Abdulafeez</h2>
+      <img data-testid="slackDisplayImage" src="./images/Akiosi_660x758.png" alt="Akiosi Abdulafeez" width="660" height="758">
+      <p data-testid="currentDayOfTheWeek"> <span id="dayoftheweek"> </span> </p>
+      <p data-testid="currentUTCTime"> <span id="utcTimePlaceholder"> </span> </p>
+      <p data-testid="myTrack">Frontend</p>
+      <p>
+        <a data-testid="githubURL" href="https://github.com/Itz-Snow/HNG-01"> git-Source code </a>
       </p>
 
-       <p class="current-UTC" data-testid="currentUTCTime">
-        Current UTC Time : <span id="utcTimePlaceholder"></span>
-      </p>
-
-      <p class="myTrack" data-testid="myTrack">
-          TRACK : FRONTEND
-      </p>
-
-      <footer>
-        <p >
-          <a data-testid="githubURL" href="https://github.com/Itz-Snow/HNG-01"> git-Source code </a>
-        </p>
-      </footer>
-      
-      </div>
-
-      <script>
-        
-        function updateUTCTime() {
-          const currentTime = Date.now();
-          const utcTimeElement = document.getElementById('utcTimePlaceholder');
-
-          if (utcTimeElement) {
-            utcTimeElement.textContent = currentTime.toString();
-          }
-        }
-        updateUTCTime();
-        // Update the time every 1 millisecond
-        setInterval(updateUTCTime, 1000);
-
-         // Get the current day of the week
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const currentDate = new Date();
-        const currentDay = currentDate.getDay();
-        const dayoftheweekElement = document.getElementById('dayoftheweek');
-
-        // Update the text content of the element with the current day
-        if (dayoftheweekElement) {
-            dayoftheweekElement.textContent = daysOfWeek[currentDay];
-        }
-      </script>
-
-  </section>
-
+    </section>
   </main>
+  
+  <script>
+    function updateUTCTime() {
+      const currentTime = Date.now();
+      const utcTimeElement = document.getElementById("utcTimePlaceholder");
 
-    
-    
+      if (utcTimeElement) {
+        utcTimeElement.textContent = currentTime.toString();
+      }
+    }
+    updateUTCTime();
+    // Update the time every 1 millisecond
+    setInterval(updateUTCTime, 1000);
+
+    // Get the current day of the week
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
+    const dayoftheweekElement = document.getElementById("dayoftheweek");
+
+    // Update the text content of the element with the current day
+    if (dayoftheweekElement) {
+      dayoftheweekElement.textContent = daysOfWeek[currentDay];
+    }
+  </script>
 </body>
 </html>
